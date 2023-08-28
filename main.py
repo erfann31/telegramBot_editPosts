@@ -1,11 +1,13 @@
 import logging
 import os
 
+from dotenv import load_dotenv
 from telegram.ext import Filters, MessageHandler, Updater
 
+load_dotenv()
 # Retrieve values from environment variables
-TOKEN = os.environ.get('BOT_TOKEN')
-ADDITIONAL_TEXT = os.environ.get('ADDITIONAL_TEXT')
+TOKEN = os.getenv('BOT_TOKEN')
+ADDITIONAL_TEXT = os.getenv('ADDITIONAL_TEXT')
 
 if TOKEN is None:
     raise ValueError("BOT_TOKEN environment variable is not set")
