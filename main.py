@@ -14,7 +14,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 def start(update, context):
     message = update.effective_message
-    message.reply_text("Welcome to the robot! Please use the /setinfo command to set the channel ID and text.\nTo find the channel ID, just send a message from your channel to the @get_id_bot bot.\n\n\nExample:\n/setinfo -100... yourText")
+    message.reply_text("Welcome to the robot! Please use the /setinfo command to set the channel ID and text.\nTo find the channel ID, just send a message from your channel to the @getidsbot bot.\n\n\nExample:\n/setinfo -100... yourText")
 
 
 def set_info(update, context):
