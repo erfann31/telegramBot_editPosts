@@ -1,8 +1,12 @@
 import logging
+import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
 from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TOKEN = os.getenv('TOKEN')
 CHANNEL_TEXT_MAP = {}
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
