@@ -44,15 +44,15 @@ def add_text_to_message(update, context):
         if message.photo:
             caption = message.caption if message.caption else ''
             caption += '\n\n' + additional_text
-            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption)
+            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption, parse_mode="Markdown")
         elif message.video:
             caption = message.caption if message.caption else ''
             caption += '\n\n' + additional_text
-            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption)
+            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption, parse_mode="Markdown")
         elif message.audio:
             caption = message.caption if message.caption else ''
             caption += '\n\n' + additional_text
-            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption)
+            context.bot.edit_message_caption(chat_id=message.chat_id, message_id=message.message_id, caption=caption, parse_mode="Markdown")
 
 
 def main():
